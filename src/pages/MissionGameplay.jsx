@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   ArrowLeft,
@@ -33,6 +33,13 @@ export function MissionGameplay({
   const coinLabel = mission.virtualCurrency?.coinLabel || 'Koin Kebaikan';
 
   const aidOptions = useMemo(() => normalizeAidOptions(mission), [mission]);
+
+  // Pastikan saat masuk layar gameplay, fokus langsung tertuju ke header & instruksi misi di paling atas
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+    if (document.body) document.body.scrollTop = 0;
+  }, []);
 
   // Selected card for visual focus
   const [selectedOptId, setSelectedOptId] = useState(() => aidOptions[0]?.id || null);
@@ -132,7 +139,7 @@ export function MissionGameplay({
   // Progress bar calculation
   const pct = Math.min(100, (totalSpent / initialCoins) * 100);
 
-  // Background per level
+  // Background per level (20 level unik)
   const getMissionBannerImage = (m) => {
     const id = m?.id || 1;
     switch (id) {
@@ -142,8 +149,22 @@ export function MissionGameplay({
       case 4: return '/images/level4_desa_bangkit.jpg';
       case 5: return '/images/level5_taman_amanah.jpg';
       case 6: return '/images/level_map_gerbang_kebaikan.jpg';
+      case 7: return '/images/level7_pasar_kebutuhan.jpg';
+      case 8: return '/images/level8_balai_desa.jpg';
+      case 9: return '/images/level9_bendahara_kecil.jpg';
+      case 10: return '/images/level10_gotong_royong.jpg';
+      case 11: return '/images/level11_taman_wakaf.jpg';
+      case 12: return '/images/level12_rapat_prioritas.jpg';
+      case 13: return '/images/level13_proyek_impian.jpg';
+      case 14: return '/images/level14_buku_catatan.jpg';
+      case 15: return '/images/level15_detektif_bukti.jpg';
+      case 16: return '/images/level16_jembatan_rencana.jpg';
+      case 17: return '/images/level17_pemeriksa_klaim.jpg';
+      case 18: return '/images/level18_benteng_aset.jpg';
+      case 19: return '/images/level19_laporan_dampak.jpg';
+      case 20: return '/images/level20_misi_akhir.jpg';
       default:
-        return m?.worldId === 2 ? '/images/world_map_adventure.jpg' : '/images/level_map_gerbang_kebaikan.jpg';
+        return '/images/level_map_gerbang_kebaikan.jpg';
     }
   };
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Lock,
@@ -68,6 +68,12 @@ export function LevelMap({
   isReducedMotion = false,
 }) {
   const [activeModalMission, setActiveModalMission] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+    if (document.body) document.body.scrollTop = 0;
+  }, [worldId]);
 
   // Background per world
   const mapBackground =

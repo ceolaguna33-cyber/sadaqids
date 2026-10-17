@@ -57,6 +57,13 @@ export function App() {
     }
   }, [isReducedMotion]);
 
+  // Konsistensi Navigasi: Setiap kali layar atau misi berpindah, POV selalu direset ke paling atas
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+    if (document.body) document.body.scrollTop = 0;
+  }, [currentScreen, selectedMissionId, selectedWorldId]);
+
   const showToast = (msg, type = 'success') => {
     setToastMessage(msg);
     setToastType(type);
@@ -232,7 +239,7 @@ export function App() {
   };
 
   const completedLevelsList = Array.isArray(progressState?.completedLevels) ? progressState.completedLevels : [];
-  const isDarkScreen = ['welcome', 'world_map', 'map', 'intro', 'gameplay'].includes(currentScreen);
+  const isDarkScreen = ['welcome', 'world_map', 'map'].includes(currentScreen);
 
   return (
     <div

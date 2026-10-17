@@ -28,12 +28,9 @@ export function NavigationBar({
 
   return (
     <header
-      className="w-full sticky top-0 z-40 transition-all duration-300 border-b border-white/40 px-3 sm:px-6 py-2"
+      className="w-full sticky top-0 z-40 transition-all duration-300 border-b-2 border-amber-200/80 px-3 sm:px-6 py-2 bg-white/92 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
       style={{
-        background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.45) 100%)',
-        backdropFilter: 'blur(20px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.9)',
+        WebkitBackdropFilter: 'blur(16px)',
       }}
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between gap-3">

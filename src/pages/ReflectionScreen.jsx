@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Check, ArrowRight, RotateCcw, Sparkles, Star,
@@ -20,6 +20,23 @@ export function ReflectionScreen({
   const [selectedOptionId, setSelectedOptionId] = useState(null);
   const [selectedReasonId, setSelectedReasonId] = useState(null);
   const [hasEvaluated, setHasEvaluated] = useState(false);
+  const feedbackRef = useRef(null);
+
+  // Pastikan saat masuk ruang refleksi, POV langsung tertuju ke pertanyaan di paling atas
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+    if (document.body) document.body.scrollTop = 0;
+  }, []);
+
+  // Saat evaluasi selesai, otomatis fokuskan POV ke kotak feedback dan tombol lanjut
+  useEffect(() => {
+    if (hasEvaluated && feedbackRef.current) {
+      setTimeout(() => {
+        feedbackRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
+  }, [hasEvaluated]);
 
   // Guard: jika data refleksi tidak ada, skip dan lanjut
   if (!reflectionData) {
@@ -67,10 +84,10 @@ export function ReflectionScreen({
 
   // warna badge per opsi
   const optionColors = [
-    { idle: 'bg-violet-50 border-violet-200', selected: 'bg-violet-600 border-violet-700', badge: 'bg-violet-600 text-white border-violet-700', shadow: '#5B21B6' },
-    { idle: 'bg-sky-50 border-sky-200', selected: 'bg-sky-500 border-sky-600', badge: 'bg-sky-500 text-white border-sky-600', shadow: '#0369A1' },
-    { idle: 'bg-pink-50 border-pink-200', selected: 'bg-pink-500 border-pink-600', badge: 'bg-pink-500 text-white border-pink-600', shadow: '#9D174D' },
-    { idle: 'bg-amber-50 border-amber-200', selected: 'bg-amber-500 border-amber-600', badge: 'bg-amber-500 text-white border-amber-600', shadow: '#92400E' },
+    { idle: 'bg-violet-50 border-violet-200', selected: 'bg-violet-600', border: 'border-violet-600', badge: 'bg-violet-600 text-white border-violet-700', shadow: '#5B21B6' },
+    { idle: 'bg-sky-50 border-sky-200', selected: 'bg-sky-500', border: 'border-sky-500', badge: 'bg-sky-500 text-white border-sky-600', shadow: '#0369A1' },
+    { idle: 'bg-pink-50 border-pink-200', selected: 'bg-pink-500', border: 'border-pink-500', badge: 'bg-pink-500 text-white border-pink-600', shadow: '#9D174D' },
+    { idle: 'bg-amber-50 border-amber-200', selected: 'bg-amber-500', border: 'border-amber-500', badge: 'bg-amber-500 text-white border-amber-600', shadow: '#92400E' },
   ];
 
   return (
@@ -204,7 +221,7 @@ export function ReflectionScreen({
             }
           } else if (isSelected) {
             cardStyle = { boxShadow: `0 5px 0 0 ${colors.shadow}`, background: 'white' };
-            borderColor = colors.selected.replace('bg-', 'border-');
+            borderColor = colors.border;
           } else {
             cardStyle = { boxShadow: '0 3px 0 0 #E5E7EB', background: 'white' };
             borderColor = 'border-stone-200';
@@ -330,6 +347,7 @@ export function ReflectionScreen({
       <AnimatePresence mode="wait">
         {hasEvaluated && selectedOption && (
           <motion.div
+            ref={feedbackRef}
             key="feedback"
             initial={isReducedMotion ? { opacity: 0 } : { scale: 0.93, opacity: 0, y: 10 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}

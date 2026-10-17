@@ -137,7 +137,6 @@ function StorybookVisualScenery({ levelId, viewMode, isReducedMotion }) {
           mascot: '/images/maskot_perempuan_cutout.png',
         };
       case 6:
-      default:
         return {
           image: before ? '/images/impact_level6_before.jpg' : '/images/level_map_gerbang_kebaikan.jpg',
           alt: before ? 'Pondasi gerbang kebaikan menunggu pilar' : 'Gerbang emas empat pilar berdiri megah',
@@ -147,6 +146,161 @@ function StorybookVisualScenery({ levelId, viewMode, isReducedMotion }) {
             ? '📜 "Pondasi empat pilar masa depan menanti keputusan bijakmu untuk membangun negeri..."'
             : '👑 "Alhamdulillah! Sekolah, klinik, masjid, dan taman kota terwujud! Kamu adalah Pahlawan Kebaikan sejati!"',
           mascot: before ? '/images/maskot_laki_cutout.png' : '/images/pohon_kebaikan_cutout.png',
+        };
+      case 7:
+        return {
+          image: '/images/level7_pasar_kebutuhan.jpg',
+          alt: 'Pasar kebutuhan desa dengan bahan pokok melimpah',
+          statusBadge: before ? '⚠️ Keadaan Sebelum: Anggaran Terbatas & Daftar Panjang' : '🛒 Keajaiban Nyata: Kebutuhan Pokok Pasar Terpenuhi!',
+          badgeClass: before ? 'bg-orange-600/90 text-white border-orange-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '⚠️ "Daftar belanja terlalu panjang dan anggaran terbatas, warga cemas makanan pokok tidak terbeli..."'
+            : '🛒 "Alhamdulillah! Beras, air bersih, dan obat posko terpenuhi tepat sasaran tanpa pemborosan!"',
+          mascot: before ? '/images/maskot_laki_cutout.png' : '/images/maskot_laki_cutout.png',
+        };
+      case 8:
+        return {
+          image: '/images/level8_balai_desa.jpg',
+          alt: 'Balai desa harapan dengan tiga keluarga menerima bantuan',
+          statusBadge: before ? '❓ Keadaan Sebelum: 3 Keluarga Butuh Bantuan Berbeda' : '🎯 Keajaiban Nyata: Bantuan Tepat Sasaran untuk 3 Keluarga!',
+          badgeClass: before ? 'bg-amber-600/90 text-white border-amber-300' : 'bg-teal-600/90 text-white border-teal-300',
+          quote: before
+            ? '❓ "Nenek butuh obat, Pak Tani butuh cangkul, dan adik sekolah butuh tas, belum ada bantuan cocok..."'
+            : '🎯 "Alhamdulillah! Nenek dapat obat, Pak Tani dapat cangkul, dan adik sekolah dapat seragam baru!"',
+          mascot: before ? '/images/maskot_perempuan_cutout.png' : '/images/maskot_perempuan_cutout.png',
+        };
+      case 9:
+        return {
+          image: '/images/level9_bendahara_kecil.jpg',
+          alt: 'Meja bendahara kecil dengan alokasi 4 pos berimbang',
+          statusBadge: before ? '💰 Keadaan Sebelum: 200 Koin Anggaran Belum Terbagi' : '⚖️ Keajaiban Nyata: 4 Pos Bantuan Terbagi Seimbang & Adil!',
+          badgeClass: before ? 'bg-yellow-600/90 text-white border-yellow-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '💰 "Banyak pos bantuan membutuhkan dana darurat, bagaimana membaginya agar adil dan cukup?"'
+            : '⚖️ "Alhamdulillah! Pos pangan, kesehatan, pendidikan, dan logistik terbagi seimbang sempurna!"',
+          mascot: '/images/maskot_perempuan_cutout.png',
+        };
+      case 10:
+        return {
+          image: '/images/level10_gotong_royong.jpg',
+          alt: 'Warga gotong royong mendistribusikan bantuan logistik',
+          statusBadge: before ? '📦 Keadaan Sebelum: Ratusan Paket Menumpuk di Gudang' : '🤝 Keajaiban Nyata: Gotong Royong Warga Membagikan Paket!',
+          badgeClass: before ? 'bg-sky-600/90 text-white border-sky-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '📦 "Paket bantuan menumpuk di gudang, relawan butuh koordinasi agar bantuan cepat sampai..."'
+            : '🤝 "Alhamdulillah! Tim packing, angkut, dan distribusi bekerja sama dengan tangkas dan ceria!"',
+          mascot: '/images/maskot_laki_cutout.png',
+        };
+      case 11:
+        return {
+          image: '/images/level11_taman_wakaf.jpg',
+          alt: 'Taman wakaf produktif yang subur dan pustaka wakaf',
+          statusBadge: before ? '🌱 Keadaan Sebelum: Lahan Tidur Terbengkalai di Sudut Desa' : '🌿 Keajaiban Nyata: Kebun Buah & Pustaka Wakaf Jariyah Lestari!',
+          badgeClass: before ? 'bg-amber-600/90 text-white border-amber-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '🌱 "Lahan subur ini lama terbengkalai, andai ada kebaikan jariyah yang bisa menghidupkannya..."'
+            : '🌿 "Alhamdulillah! Kebun wakaf berbuah lebat dan pustaka wakaf mencerdaskan anak-anak desa sepanjang masa!"',
+          mascot: '/images/maskot_perempuan_cutout.png',
+        };
+      case 12:
+        return {
+          image: '/images/level12_rapat_prioritas.jpg',
+          alt: 'Rapat darurat balai desa menentukan prioritas penyelamatan',
+          statusBadge: before ? '⚡ Keadaan Sebelum: 5 Usulan Masuk, Anggaran Cuma 3 Slot' : '🚨 Keajaiban Nyata: Mufakat Mendahulukan Penyelamatan Warga!',
+          badgeClass: before ? 'bg-red-600/90 text-white border-red-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '⚡ "Banjir melanda dan dana terbatas, kita harus memilih usulan yang paling genting menyelamatkan jiwa..."'
+            : '🚨 "Alhamdulillah! Keputusan mufakat berhasil mendahulukan gizi balita, evakuasi, dan obat darurat!"',
+          mascot: '/images/maskot_laki_cutout.png',
+        };
+      case 13:
+        return {
+          image: '/images/level13_proyek_impian.jpg',
+          alt: 'Peresmian Pusat Komunitas & Kesehatan Impian Warga',
+          statusBadge: before ? '🏗️ Keadaan Sebelum: Desain Maket Pusat Komunitas & Klinik' : '🎉 Keajaiban Nyata: Pusat Kebaikan Bersama Diresmikan Warga!',
+          badgeClass: before ? 'bg-purple-600/90 text-white border-purple-300' : 'bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 border-yellow-200',
+          quote: before
+            ? '🏗️ "Warga mendambakan pusat kegiatan, klinik kesehatan, dan perpustakaan terpadu di desa kita..."'
+            : '🎉 "Alhamdulillah! Pita merah tergunting, Pusat Komunitas & Kesehatan resmi melayani seluruh warga desa!"',
+          mascot: '/images/maskot_laki_cutout.png',
+        };
+      case 14:
+        return {
+          image: '/images/level14_buku_catatan.jpg',
+          alt: 'Buku catatan kas amanah terisi rapi di meja audit',
+          statusBadge: before ? '📒 Keadaan Sebelum: Aliran Donasi Masuk & Keluar Belum Tercatat' : '✅ Keajaiban Nyata: Buku Catatan Amanah Terisi Rapi & Jujur!',
+          badgeClass: before ? 'bg-blue-700/90 text-white border-blue-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '📒 "Setiap rupiah adalah titipan kepercayaan donatur, jangan sampai ada sepeserpun yang luput dari catatan..."'
+            : '✅ "Alhamdulillah! Setiap koin masuk dan keluar tercatat dengan jujur dan rapi di Buku Amanah!"',
+          mascot: '/images/maskot_perempuan_cutout.png',
+        };
+      case 15:
+        return {
+          image: '/images/level15_detektif_bukti.jpg',
+          alt: 'Detektif bukti memeriksa nota dan faktur dengan kaca pembesar',
+          statusBadge: before ? '🔍 Keadaan Sebelum: 5 Faktur Belanja Masuk Meja Audit' : '🔎 Keajaiban Nyata: Seluruh Nota Diverifikasi Sah & Jujur!',
+          badgeClass: before ? 'bg-indigo-600/90 text-white border-indigo-300' : 'bg-teal-600/90 text-white border-teal-300',
+          quote: before
+            ? '🔍 "Ada faktur belanja yang mencurigakan tanpa stempel toko, detektif cilik harus memeriksa dengan jeli..."'
+            : '🔎 "Alhamdulillah! Berkat ketelitian detektif cilik, seluruh nota belanja diverifikasi sah dengan cap toko resmi!"',
+          mascot: '/images/maskot_laki_cutout.png',
+        };
+      case 16:
+        return {
+          image: '/images/level16_jembatan_rencana.jpg',
+          alt: 'Jembatan evaluasi membandingkan rencana dan kenyataan anggaran',
+          statusBadge: before ? '📊 Keadaan Sebelum: Evaluasi Akhir Bulan, Apakah Anggaran Sesuai?' : '🌉 Keajaiban Nyata: Jembatan Rencana & Realisasi Seimbang!',
+          badgeClass: before ? 'bg-violet-600/90 text-white border-violet-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '📊 "Mari bandingkan rencana awal dan kenyataan lapangan, apakah ada pemborosan dana bantuan?"'
+            : '🌉 "Alhamdulillah! Evaluasi membuktikan anggaran digunakan sangat efisien dan ada sisa hemat untuk program berikutnya!"',
+          mascot: '/images/maskot_perempuan_cutout.png',
+        };
+      case 17:
+        return {
+          image: '/images/level17_pemeriksa_klaim.jpg',
+          alt: 'Meja verifikasi klaim dan berkas penerima bantuan berhak',
+          statusBadge: before ? '🛡️ Keadaan Sebelum: Dokumen Pengajuan Bantuan Menanti Verifikasi' : '📜 Keajaiban Nyata: Bantuan Diterima Hanya oleh yang Berhak!',
+          badgeClass: before ? 'bg-slate-600/90 text-white border-slate-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '🛡️ "Pemeriksa harus teliti dan adil, jangan sampai bantuan disalahgunakan oleh pihak yang tidak berhak..."'
+            : '📜 "Alhamdulillah! Dokumen keluarga prasejahtera diverifikasi sah dan santunan diserahkan tepat sasaran!"',
+          mascot: '/images/maskot_laki_cutout.png',
+        };
+      case 18:
+        return {
+          image: '/images/level18_benteng_aset.jpg',
+          alt: 'Benteng aset wakaf melindungi patok batas dan sertifikat legal',
+          statusBadge: before ? '🏰 Keadaan Sebelum: 3 Ancaman Mengintai Komplek Tanah Wakaf' : '🛡️ Keajaiban Nyata: Patok Batas & Sertifikat Wakaf Aman Terlindungi!',
+          badgeClass: before ? 'bg-amber-700/90 text-white border-amber-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '🏰 "Patok batas tanah wakaf digeser oknum dan dokumen terancam, benteng perlindungan harus ditegakkan..."'
+            : '🛡️ "Alhamdulillah! Sertifikat resmi terpasang dan patok batas tanah wakaf kini berdiri kokoh dan aman!"',
+          mascot: '/images/maskot_perempuan_cutout.png',
+        };
+      case 19:
+        return {
+          image: '/images/level19_laporan_dampak.jpg',
+          alt: 'Papan pengumuman transparansi laporan dampak publik 100%',
+          statusBadge: before ? '📋 Keadaan Sebelum: Penyusunan Laporan Transparansi Donatur' : '📢 Keajaiban Nyata: Papan Transparansi 100% Terbuka untuk Warga!',
+          badgeClass: before ? 'bg-teal-700/90 text-white border-teal-300' : 'bg-emerald-600/90 text-white border-emerald-300',
+          quote: before
+            ? '📋 "Laporan yang baik bukan hanya mencatat keberhasilan, tapi juga jujur mencatat pelajaran dari lapangan..."'
+            : '📢 "Alhamdulillah! Infografis penggunaan dana donasi 100% dipublikasikan terbuka di hadapan seluruh warga!"',
+          mascot: '/images/maskot_laki_cutout.png',
+        };
+      case 20:
+      default:
+        return {
+          image: '/images/level20_misi_akhir.jpg',
+          alt: 'Puncak perayaan agung Penjaga Amanah Nusantara di istana kubah emas',
+          statusBadge: before ? '👑 Keadaan Sebelum: Ujian Pamungkas 3 Pilar Penjaga Amanah' : '🌟 Keajaiban Nyata: Gelar Pahlawan Penjaga Amanah Nusantara!',
+          badgeClass: before ? 'bg-amber-700/90 text-white border-amber-300' : 'bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 text-stone-950 border-yellow-200',
+          quote: before
+            ? '👑 "Ujian akhir memadukan identifikasi, alokasi, dan laporan pertanggungjawaban di hadapan Pohon Kebaikan..."'
+            : '🌟 "Maa Syaa Allah! Kamu telah menuntaskan seluruh 20 Level Petualangan dan menyandang gelar Penjaga Amanah Nusantara Sejati! 🌟👑"',
+          mascot: '/images/pohon_kebaikan_cutout.png',
         };
     }
   };
@@ -360,6 +514,7 @@ export function ImpactScreen({
   const remainingCoins = Math.max(0, initialCoins - playerTotalCoins);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     if (onPlaySound) setTimeout(() => onPlaySound('goalReached'), 300);
   }, [onPlaySound]);
 

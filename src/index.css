@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Polyfills for Tailwind v4 shadow utilities used in this project */
+  .drop-shadow-xs {
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.08));
+  }
+  .drop-shadow-2xs {
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.04));
+  }
+  .shadow-xs {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .shadow-2xs {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.04);
+  }
+}
+
 @layer base {
   html {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;

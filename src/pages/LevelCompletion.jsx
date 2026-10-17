@@ -40,9 +40,12 @@ export function LevelCompletion({
   const totalLevels = allLevels.length; // 20 levels
   const isLastLevel = mission?.id === totalLevels;
   const nextMission = getLevelById((mission?.id || 0) + 1, MISSIONS_DATA);
-  const theme = CELEBRATION_THEMES[mission?.id] || CELEBRATION_THEMES[2];
+  const theme = CELEBRATION_THEMES[((mission?.id - 1) % 6) + 1] || CELEBRATION_THEMES[1];
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+    if (document.body) document.body.scrollTop = 0;
     if (onPlaySound) {
       setTimeout(() => onPlaySound('badgeFanfare'), 200);
     }

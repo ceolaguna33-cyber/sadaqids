@@ -183,66 +183,119 @@ function StoryStageIllustration({ theme, isReducedMotion, speaker }) {
       // DUNIA 2 — LEVEL 7: PASAR KEBUTUHAN (Kebutuhan vs Keinginan)
       // ----------------------------------------------------------------------
       case 'market_morning':
+        return {
+          image: '/images/level7_pasar_kebutuhan.jpg',
+          alt: 'Pasar Desa Pagi Penuh Kebutuhan Pokok',
+          badge: '🛒 Pasar Desa — Regu Bantuan Tiba',
+          badgeColor: 'bg-amber-600/90 text-white border-amber-300',
+          mascot: '/images/maskot_laki_cutout.png',
+          overlayText: '🌾 Pagi yang cerah di pasar desa',
+        };
       case 'long_list':
+        return {
+          image: '/images/level7_pasar_kebutuhan.jpg',
+          alt: 'Daftar panjang barang belanja bantuan',
+          badge: '📋 15 Barang di Daftar — Anggaran Cuma Cukup 8!',
+          badgeColor: 'bg-orange-600/90 text-white border-orange-300',
+          mascot: '/images/maskot_laki_cutout.png',
+          overlayText: '⚠️ Prioritaskan 8 kebutuhan paling genting!',
+        };
       case 'needs_vs_wants':
         return {
           image: '/images/level7_pasar_kebutuhan.jpg',
-          alt: 'Pasar Desa Pagi Penuh Kebutuhan',
-          badge: '🛒 Pasar Kebutuhan — Pilih yang Tepat!',
-          badgeColor: 'bg-orange-600/90 text-white border-orange-300',
-          mascot: '/images/maskot_laki_cutout.png',
+          alt: 'Kebutuhan pokok bertahan hidup vs keinginan tambahan',
+          badge: '⚖️ Kebutuhan Pokok Hidup vs Keinginan Tambahan',
+          badgeColor: 'bg-emerald-600/90 text-white border-emerald-300',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '🍚 Kebutuhan = Pangan & Obat • Hiburan = Bisa Ditunda',
         };
 
       // ----------------------------------------------------------------------
       // DUNIA 2 — LEVEL 8: BALAI DESA HARAPAN (Matching Bantuan)
       // ----------------------------------------------------------------------
       case 'village_hall':
-      case 'diverse_families':
         return {
           image: '/images/level8_balai_desa.jpg',
           alt: 'Balai Desa Harapan Tempat Musyawarah',
-          badge: '🎯 Balai Desa — Cocokkan Bantuan!',
+          badge: '🏛️ Balai Desa — 3 Keluarga Berbeda Mengantre',
           badgeColor: 'bg-amber-600/90 text-white border-amber-300',
           mascot: '/images/maskot_perempuan_cutout.png',
+          overlayText: '👥 Setiap keluarga memiliki cerita berbeda',
+        };
+      case 'diverse_families':
+        return {
+          image: '/images/level8_balai_desa.jpg',
+          alt: 'Mencocokkan bantuan sesuai kebutuhan keluarga',
+          badge: '🎯 Bantuan yang Baik: Sesuai Kondisi Masing-Masing',
+          badgeColor: 'bg-teal-600/90 text-white border-teal-300',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '👵 Nenek: Obat • 🌾 Pak Tani: Cangkul • 🎒 Anak: Buku',
         };
 
       // ----------------------------------------------------------------------
       // DUNIA 2 — LEVEL 9: BENDAHARA KECIL (Alokasi Berimbang)
       // ----------------------------------------------------------------------
       case 'office_relawan':
-      case 'budget_intro':
         return {
           image: '/images/level9_bendahara_kecil.jpg',
           alt: 'Meja Bendahara Kecil dengan Buku Catatan',
-          badge: '💰 Bendahara Kecil — Bagi Anggaran!',
-          badgeColor: 'bg-lime-600/90 text-white border-lime-300',
+          badge: '💼 Amanah Baru: Menjadi Bendahara Kecil Musim Hujan',
+          badgeColor: 'bg-blue-600/90 text-white border-blue-300',
           mascot: '/images/maskot_perempuan_cutout.png',
+          overlayText: '🪙 Kelola koin amanah dengan bijaksana',
+        };
+      case 'budget_intro':
+        return {
+          image: '/images/level9_bendahara_kecil.jpg',
+          alt: 'Membagi 200 koin ke 4 pos anggaran secara berimbang',
+          badge: '💰 200 Koin Anggaran: 4 Pos Bantuan Seimbang',
+          badgeColor: 'bg-emerald-600/90 text-white border-emerald-300',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '🍚 Pangan • 💊 Kesehatan • 📚 Buku • 🚛 Logistik',
         };
 
       // ----------------------------------------------------------------------
       // DUNIA 2 — LEVEL 10: TIM GOTONG ROYONG (Kolaborasi)
       // ----------------------------------------------------------------------
       case 'warehouse_team':
+        return {
+          image: '/images/level10_gotong_royong.jpg',
+          alt: 'Ratusan paket bantuan di gudang logistik',
+          badge: '📦 Gudang Logistik — Ratusan Paket Siap Dikirim!',
+          badgeColor: 'bg-sky-600/90 text-white border-sky-300',
+          mascot: '/images/maskot_laki_cutout.png',
+          overlayText: '🏃 3 Tim: Packing, Angkut, dan Distribusi',
+        };
       case 'teamwork_power':
         return {
           image: '/images/level10_gotong_royong.jpg',
-          alt: 'Warga Gotong Royong Bersama-sama',
-          badge: '🤝 Tim Gotong Royong — Bersama Lebih Kuat!',
+          alt: 'Kekuatan gotong royong dan kerja sama tim',
+          badge: '🤝 Gotong Royong: 10 Orang Pindahkan 1.000 Kotak!',
           badgeColor: 'bg-teal-600/90 text-white border-teal-300',
-          mascot: '/images/maskot_laki_cutout.png',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '✨ Bersama-sama misi besar terasa ringan',
         };
 
       // ----------------------------------------------------------------------
       // DUNIA 2 — LEVEL 11: TAMAN WAKAF ABADI (Wakaf Produktif)
       // ----------------------------------------------------------------------
       case 'abandoned_park':
+        return {
+          image: '/images/level11_taman_wakaf.jpg',
+          alt: 'Lahan subur di sudut desa menanti sentuhan kebaikan',
+          badge: '🌱 Lahan Subur Menanti Kebaikan Wakaf Produktif',
+          badgeColor: 'bg-amber-600/90 text-white border-amber-300',
+          mascot: '/images/maskot_perempuan_cutout.png',
+          overlayText: '📍 Lokasi strategis untuk manfaat abadi warga',
+        };
       case 'waqf_power':
         return {
           image: '/images/level11_taman_wakaf.jpg',
-          alt: 'Taman Wakaf Produktif yang Subur',
-          badge: '🌿 Taman Wakaf Abadi — Sedekah Jariyah!',
+          alt: 'Pahala sedekah jariyah wakaf mengalir tanpa henti',
+          badge: '🌿 Wakaf Jariyah: Sedekah yang Pahala Terus Mengalir',
           badgeColor: 'bg-emerald-600/90 text-white border-emerald-300',
-          mascot: '/images/maskot_perempuan_cutout.png',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '🌳 Kebun & Pustaka Wakaf: Manfaat Berkelanjutan',
         };
 
       // ----------------------------------------------------------------------
@@ -252,9 +305,10 @@ function StoryStageIllustration({ theme, isReducedMotion, speaker }) {
         return {
           image: '/images/level12_rapat_prioritas.jpg',
           alt: 'Rapat Darurat Menentukan Prioritas',
-          badge: '⚡ Rapat Prioritas — Tentukan yang Paling Mendesak!',
+          badge: '⚡ Rapat Prioritas: 5 Usulan Masuk, Hanya 3 Slot!',
           badgeColor: 'bg-red-600/90 text-white border-red-300',
           mascot: '/images/maskot_laki_cutout.png',
+          overlayText: '🚨 Dahulukan keselamatan nyawa dan gizi darurat',
         };
 
       // ----------------------------------------------------------------------
@@ -264,35 +318,54 @@ function StoryStageIllustration({ theme, isReducedMotion, speaker }) {
         return {
           image: '/images/level13_proyek_impian.jpg',
           alt: 'Peresmian Proyek Impian Masyarakat',
-          badge: '🏗️ Proyek Impian — Wujudkan Kebaikan Besar!',
+          badge: '🏗️ Studio Rancangan — Bangun Pusat Kebaikan Bersama!',
           badgeColor: 'bg-purple-600/90 text-white border-purple-300',
-          mascot: '/images/maskot_laki_cutout.png',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '🎉 Merancang dari nol: Sasaran, Anggaran & Dampak',
         };
 
       // ----------------------------------------------------------------------
       // DUNIA 3 — LEVEL 14: BUKU CATATAN AMANAH (Akuntansi Dasar)
       // ----------------------------------------------------------------------
       case 'finance_office':
+        return {
+          image: '/images/level14_buku_catatan.jpg',
+          alt: 'Kantor Akuntansi Kas Penjaga Amanah',
+          badge: '🏰 Selamat Datang di Dunia Penjaga Amanah!',
+          badgeColor: 'bg-indigo-700/90 text-white border-indigo-300',
+          mascot: '/images/maskot_perempuan_cutout.png',
+          overlayText: '🛡️ Menjaga kepercayaan adalah tugas paling mulia',
+        };
       case 'amanah_book':
         return {
           image: '/images/level14_buku_catatan.jpg',
           alt: 'Buku Catatan Amanah dan Laporan Keuangan',
-          badge: '📒 Buku Amanah — Catat dengan Teliti!',
-          badgeColor: 'bg-blue-700/90 text-white border-blue-300',
-          mascot: '/images/maskot_perempuan_cutout.png',
+          badge: '📒 Buku Catatan Kas: Setiap Rupiah Donasi Dicatat Jujur',
+          badgeColor: 'bg-violet-700/90 text-white border-violet-300',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '✍️ Mencatat jujur berarti menghargai amanah donatur',
         };
 
       // ----------------------------------------------------------------------
       // DUNIA 3 — LEVEL 15: DETEKTIF BUKTI (Verifikasi Nota)
       // ----------------------------------------------------------------------
       case 'audit_desk':
+        return {
+          image: '/images/level15_detektif_bukti.jpg',
+          alt: 'Meja audit memeriksa lima faktur pembelian bantuan',
+          badge: '🔍 Meja Audit: 5 Faktur Belanja Masuk untuk Diperiksa',
+          badgeColor: 'bg-indigo-600/90 text-white border-indigo-300',
+          mascot: '/images/maskot_laki_cutout.png',
+          overlayText: '🔎 Gunakan mata jeli, jangan ada yang terlewat',
+        };
       case 'invoice_check':
         return {
           image: '/images/level15_detektif_bukti.jpg',
-          alt: 'Detektif Kecil Memeriksa Nota Bukti',
-          badge: '🔍 Detektif Bukti — Periksa Nota!',
-          badgeColor: 'bg-indigo-600/90 text-white border-indigo-300',
-          mascot: '/images/maskot_laki_cutout.png',
+          alt: 'Kaca pembesar memeriksa nota bukti dan faktur toko',
+          badge: '🔎 Detektif Bukti: 4 Syarat Nota Sah & Bertanda Tangan',
+          badgeColor: 'bg-teal-600/90 text-white border-teal-300',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '🧾 Cek: Nama Toko, Tanggal, Harga Sesuai & Tanda Tangan',
         };
 
       // ----------------------------------------------------------------------
@@ -302,9 +375,10 @@ function StoryStageIllustration({ theme, isReducedMotion, speaker }) {
         return {
           image: '/images/level16_jembatan_rencana.jpg',
           alt: 'Menganalisis Kesenjangan Rencana dan Kenyataan',
-          badge: '📊 Jembatan Rencana — Temukan Celah!',
+          badge: '📊 Jembatan Rencana-Nyata: Evaluasi Anggaran & Efisiensi',
           badgeColor: 'bg-violet-600/90 text-white border-violet-300',
           mascot: '/images/maskot_perempuan_cutout.png',
+          overlayText: '🌉 Bandingkan rencana awal dengan realisasi lapangan',
         };
 
       // ----------------------------------------------------------------------
@@ -313,10 +387,11 @@ function StoryStageIllustration({ theme, isReducedMotion, speaker }) {
       case 'verification_office':
         return {
           image: '/images/level17_pemeriksa_klaim.jpg',
-          alt: 'Memeriksa Klaim Dana dengan Seksama',
-          badge: '🛡️ Pemeriksa Klaim — Jaga Integritas!',
-          badgeColor: 'bg-slate-600/90 text-white border-slate-300',
+          alt: 'Memeriksa Dokumen Hak Penerima Bantuan secara Adil',
+          badge: '🛡️ Pemeriksa Klaim: Verifikasi Berkas Penerima Berhak',
+          badgeColor: 'bg-slate-700/90 text-white border-slate-300',
           mascot: '/images/maskot_laki_cutout.png',
+          overlayText: '📜 Hanya yang benar-benar berhak yang menerima bantuan',
         };
 
       // ----------------------------------------------------------------------
@@ -325,10 +400,11 @@ function StoryStageIllustration({ theme, isReducedMotion, speaker }) {
       case 'waqf_threats':
         return {
           image: '/images/level18_benteng_aset.jpg',
-          alt: 'Menjaga Aset Wakaf dari Ancaman',
-          badge: '🏰 Benteng Wakaf — Lindungi Amanah!',
+          alt: 'Menjaga Patok Batas dan Sertifikat Aset Wakaf dari Ancaman',
+          badge: '🏰 Benteng Wakaf: Lindungi Patok Batas & Sertifikat Resmi',
           badgeColor: 'bg-amber-700/90 text-white border-amber-300',
           mascot: '/images/maskot_perempuan_cutout.png',
+          overlayText: '🛡️ Tegakkan pertahanan: Hukum, Fisik & Transparansi',
         };
 
       // ----------------------------------------------------------------------
@@ -337,23 +413,33 @@ function StoryStageIllustration({ theme, isReducedMotion, speaker }) {
       case 'report_desk':
         return {
           image: '/images/level19_laporan_dampak.jpg',
-          alt: 'Menyusun Laporan Dampak yang Transparan',
-          badge: '📋 Laporan Dampak — Laporkan Kebenaran!',
+          alt: 'Menyusun Laporan Dampak Transparansi Publik 100%',
+          badge: '📋 Papan Transparansi: Laporan Terbuka Tumbuhkan Kepercayaan',
           badgeColor: 'bg-teal-700/90 text-white border-teal-300',
-          mascot: '/images/maskot_laki_cutout.png',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '📢 Catat keberhasilan dan pelajaran dengan jujur',
         };
 
       // ----------------------------------------------------------------------
       // DUNIA 3 — LEVEL 20: MISI AKHIR TERPADU (Grand Finale)
       // ----------------------------------------------------------------------
       case 'grand_finale':
+        return {
+          image: '/images/level20_misi_akhir.jpg',
+          alt: 'Puncak Perjalanan Penjaga Amanah di Hadapan Pohon Kebaikan Emas',
+          badge: '👑 Puncak Perjalanan: Mahkota Penjaga Amanah Nusantara!',
+          badgeColor: 'bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 border-yellow-200',
+          mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '🌟 Dari sedekah kecil hingga menjaga amanah besar',
+        };
       case 'three_stages':
         return {
           image: '/images/level20_misi_akhir.jpg',
-          alt: 'Misi Akhir Paripurna Penjaga Amanah',
-          badge: '👑 Misi Akhir Terpadu — Penjaga Amanah Sejati!',
-          badgeColor: 'bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 border-yellow-200',
+          alt: 'Ujian Terpadu Tiga Tahap Penjaga Amanah',
+          badge: '⭐ Ujian 3 Tahap: Identifikasi, Alokasi & Pertanggungjawaban',
+          badgeColor: 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white border-indigo-300',
           mascot: '/images/pohon_kebaikan_cutout.png',
+          overlayText: '1️⃣ Kenali ➔ 2️⃣ Alokasi Bijak ➔ 3️⃣ Lapor Jujur',
         };
 
       case 'kingdom_gate':
@@ -394,6 +480,18 @@ function StoryStageIllustration({ theme, isReducedMotion, speaker }) {
           background: 'radial-gradient(ellipse at 50% 20%, rgba(254, 240, 138, 0.45), transparent 75%)',
         }}
       />
+
+      {/* Contextual Story Highlight Chip (Kanan Atas Gambar) */}
+      {config.overlayText && (
+        <motion.div
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full font-display font-extrabold text-[11px] sm:text-xs shadow-lg bg-stone-900/85 text-amber-200 border border-amber-300/40 backdrop-blur-md"
+        >
+          <span>{config.overlayText}</span>
+        </motion.div>
+      )}
 
       {/* Badge Topik Adegan (Kiri Bawah Gambar) */}
       <motion.div
@@ -465,6 +563,13 @@ export function EducationalIntro({
   const currentAudioRef = useRef(null);
   const visualTimerRef = useRef(null);
   const transitionTimeoutRef = useRef(null);
+
+  // Pastikan panggung adegan selalu berada di POV utama saat masuk dan ganti adegan
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+    if (document.body) document.body.scrollTop = 0;
+  }, [currentSceneIndex]);
 
   const currentScene = scenes[currentSceneIndex] || scenes[0] || fallbackScene;
   const VISUAL_FALLBACK_DURATION_MS = 8500; // 8.5 detik durasi membaca tenang
