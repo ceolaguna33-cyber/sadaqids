@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Koleksi Ilustrasi Vektor SVG Kustom Bertema Whimsical Storybook Adventure
-// Didesain khusus untuk anak usia 8-10 tahun tanpa emoji sistem generik
+// Didesain khusus ramah untuk semua umur tanpa emoji sistem generik
 
 export function IconKoinKebaikan({ size = 28, className = "" }) {
   return (

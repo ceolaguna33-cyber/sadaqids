@@ -20,7 +20,7 @@ export function SimulationStamp({
       <motion.span
         {...stampSpring}
         className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-amber-100/90 border border-amber-400 text-amber-950 font-display font-extrabold text-[10px] tracking-wider uppercase shadow-xs select-none ${className}`}
-        title="Cerita petualangan anak untuk belajar kebaikan dan berbagi"
+        title="Cerita petualangan untuk semua umur belajar kebaikan dan berbagi"
       >
         <Sparkles className="w-3 h-3 text-amber-700 shrink-0" />
         <span>CERITA PETUALANGAN KEBAIKAN</span>
@@ -37,7 +37,7 @@ export function SimulationStamp({
         <div className="flex items-center gap-1 text-forest-800 mb-0.5">
           <Shield className="w-4 h-4 text-forest-700 fill-forest-100" />
           <span className="text-[10px] font-extrabold uppercase tracking-widest text-forest-900">
-            PETUALANGAN ANAK HEBAT
+            PETUALANGAN SAHABAT HEBAT
           </span>
         </div>
         <span className="font-display font-black text-xs sm:text-sm text-warm-900 tracking-wide uppercase px-2 py-0.5 bg-warm-200/80 rounded-md border border-warm-400">
@@ -55,7 +55,7 @@ export function SimulationStamp({
     <motion.div
       {...stampSpring}
       className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-warm-100 border-2 border-warm-400 text-warm-950 font-display font-extrabold text-xs tracking-wide uppercase shadow-sm select-none ${className}`}
-      title="Cerita petualangan anak untuk belajar kebaikan dan berbagi"
+      title="Cerita petualangan untuk semua umur belajar kebaikan dan berbagi"
     >
       <Bookmark className="w-3.5 h-3.5 text-warm-700 fill-warm-300 shrink-0" />
       <span>CERITA PETUALANGAN KEBAIKAN</span>

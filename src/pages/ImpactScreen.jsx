@@ -476,7 +476,7 @@ function StorybookTransformationStage({ mission, playerAllocations, isReducedMot
         </AnimatePresence>
       </div>
 
-      {/* Narasi Pembelajaran Ramah Anak Usia 8-10 Tahun */}
+      {/* Narasi Pembelajaran Ramah Semua Umur */}
       <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-amber-50 border-2 border-emerald-300 rounded-2xl p-4 sm:p-5 text-xs sm:text-sm text-emerald-950 font-sans leading-relaxed flex items-start gap-3.5 shadow-sm">
         <span className="text-3xl shrink-0">🌟</span>
         <div>
@@ -710,11 +710,11 @@ export function ImpactScreen({
           </div>
         </div>
 
-        {/* Pemberitahuan Ramah Anak Usia 8-10 Tahun */}
+        {/* Pemberitahuan Ramah Semua Umur */}
         <div className="p-3.5 bg-amber-100/90 rounded-2xl border-2 border-amber-300 text-xs text-amber-950 font-medium flex items-center gap-2.5">
           <span className="text-xl shrink-0">💡</span>
           <span>
-            <strong>Pesan Sahabat SADAQIDS:</strong> Hebat! Pilihan koinmu mengutamakan yang paling penting dulu. Itu artinya kamu sudah belajar menjadi anak yang bijak dan amanah!
+            <strong>Pesan Sahabat SADAQIDS:</strong> Hebat! Pilihan koinmu mengutamakan yang paling penting dulu. Itu artinya kamu sudah belajar menjadi pribadi yang bijak dan amanah!
           </span>
         </div>
 

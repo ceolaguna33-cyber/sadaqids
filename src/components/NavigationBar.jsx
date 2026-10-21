@@ -54,7 +54,7 @@ export function NavigationBar({
               SADAQIDS
             </span>
             <span className="text-[10px] sm:text-[11px] font-black text-amber-800/90 tracking-wider uppercase block mt-1">
-              Petualangan Sedekah Anak
+              Petualangan Sedekah Semua Umur
             </span>
           </div>
         </button>

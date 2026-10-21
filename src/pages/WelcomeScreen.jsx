@@ -209,7 +209,7 @@ export function WelcomeScreen({
                 }}
               >
                 <span className="font-display font-black text-sm sm:text-lg lg:text-xl text-amber-100 uppercase tracking-widest drop-shadow-sm">
-                  PETUALANGAN SEDEKAH ANAK
+                  PETUALANGAN SEDEKAH SEMUA UMUR
                 </span>
               </motion.div>
 
@@ -272,7 +272,7 @@ export function WelcomeScreen({
           {/* Bottom Security / Age Appropriate Tag */}
           <div className="flex items-center justify-center gap-2 text-white/80 text-[11px] sm:text-xs font-bold bg-black/30 backdrop-blur-sm px-4 py-1.5 rounded-full border border-white/20">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Dirancang khusus anak usia 8–10 tahun • 100% Edukatif &amp; Simulasi Aman</span>
+            <span>Dirancang untuk Semua Umur • 100% Edukatif &amp; Simulasi Aman</span>
           </div>
 
         </div>

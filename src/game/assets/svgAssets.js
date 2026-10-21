@@ -1,5 +1,5 @@
 // Kumpulan Aset Vektor SVG Murni untuk Engine Game Phaser 4
-// Bergaya illustrated storybook premium, hangat, dan ramah anak usia 8-10 tahun
+// Bergaya illustrated storybook premium, hangat, dan ramah untuk semua umur
 
 export const SVG_ASSETS = {
   // --- KOIN & TOKEN KEBAIKAN ---
